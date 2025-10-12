@@ -13,7 +13,13 @@
         </form>
 
         <div class="resultado-display">
-            <p>Resultado: <span id="resultado">{{resultado}}</span></p>
+            <p>Seu resultado está abaixo:</p>
         </div>
+
+        @if(resultado){
+            <div class="resultado-display">
+                <p>Resultado: <span id="resultado">{{resultado}}</span></p>
+            </div>
+        }
     </div>
 </div>
