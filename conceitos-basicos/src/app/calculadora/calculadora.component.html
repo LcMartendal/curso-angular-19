@@ -12,13 +12,17 @@
             <button type="submit">Somar</button>
         </form>
 
-        <div class="resultado-display">
+        <div class="resultado-display" *ngIf="resultado">
             <p>Seu resultado está abaixo:</p>
         </div>
 
         @if(resultado){
             <div class="resultado-display">
                 <p>Resultado: <span id="resultado">{{resultado}}</span></p>
+            </div>
+        }@else {
+            <div class="resultado-display">
+                <p>Seu resultado aparecerá aqui.</p>
             </div>
         }
     </div>
