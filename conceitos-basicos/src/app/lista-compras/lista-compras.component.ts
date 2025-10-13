@@ -25,4 +25,13 @@ export class ListaComprasComponent {
 
     console.table(this.lista);
   }
+
+  riscarItem(itemLista: ItemLista){
+    itemLista.comprado = !itemLista.comprado;
+  }
+
+  limparLista(){
+    this.lista = [];
+  }
+
 }
