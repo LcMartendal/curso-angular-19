@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ItemLista } from './itemLista'
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-lista-compras',
-  imports: [ FormsModule],
+  imports: [ FormsModule, CommonModule],
   templateUrl: './lista-compras.component.html',
   styleUrl: './lista-compras.component.scss'
 })
