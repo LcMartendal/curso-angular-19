@@ -16,12 +16,15 @@ export class ListaComprasComponent {
   adicionarItem(){
     let itemLista = new ItemLista();
 
-    itemLista.nome = this.item;
-    itemLista.id = this.lista.length +1;
-
-    this.lista.push(itemLista);
-
-    this.item = '';
+    if(this.item){
+      itemLista.nome = this.item;
+      itemLista.id = this.lista.length +1;
+      this.lista.push(itemLista);
+      this.item = '';
+    }else{
+      alert("Necessário indicar o item!");
+    }
+    
 
     console.table(this.lista);
   }
